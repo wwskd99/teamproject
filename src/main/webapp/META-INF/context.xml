@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DBCP 연동을 위한 설정
+프로젝트를 추가/삭제하는데 영향을 받지 않는다.
+server.xml에 작성하는 것보다 저는 편하다.
+ -->
+<Context>
+	<Resource name="jdbc/teamdb" auth="Container"
+		driverClassName="com.mysql.cj.jdbc.Driver" type="javax.sql.DataSource"
+		username="teamproject" password="teamproject" url="jdbc:mysql://localhost:3306/teamdb?useSSL=false&amp;allowPublicKeyRetrieval=true"
+		maxTotal="20" maxIdle="10" maxWaitMillis="-1"
+	/>
+</Context>
